@@ -3096,17 +3096,24 @@ img {
   }
 }
 
-.footer-style-1 .couple-pic img {
-  max-width: 75%;
-  border-radius: 50%;
-  position: absolute;
-  left: 48%;
-  top: 44%;
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+.footer-style-1 .couple-pic{
+  .ant-image {
+    width: 100%;
+    height: 100%;
+  }
+  img {
+    max-width: 75%;
+    max-height: 75%;
+    border-radius: 50%;
+    position: absolute;
+    left: 48%;
+    top: 44%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
 }
 
 .footer-style-1 h2 {
@@ -4492,7 +4499,6 @@ img {
 }
 
 .event-section .top-area {
-  /* background: url("../images/event-bg.jpg") center center/cover no-repeat local; */
   text-align: center;
   width: 100%;
   height: 60%;

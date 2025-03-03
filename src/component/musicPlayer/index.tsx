@@ -6,17 +6,14 @@ import "./musicPlayer.css";
 const MusicPlayer: React.FC = () => {
   const [isPlaying, setIsPlaying] = useState(true);
   const audioRef = useRef<HTMLAudioElement>(null);
-  const audioRef2 = useRef<HTMLIFrameElement>(null);
-  const urlMusic =
-    "https://cdn.biihappy.com/ziiweb/wedding-musics/BeautifulInWhite-ShaneFilan-524801.mp3";
   useEffect(() => {
-    if (audioRef.current && isPlaying) {
-      audioRef.current.pause();
-      setTimeout(() => {
-        audioRef.current?.play();
-      }, 500);
+    if (audioRef.current) {
+      const isAudioPlaying =
+        !audioRef.current.paused && audioRef.current.readyState > 2;
+      console.log({ isAudioPlaying });
+      setIsPlaying(isAudioPlaying);
     }
-  }, [audioRef?.current]);
+  }, [audioRef?.current?.readyState]);
 
   const toggleMusic = () => {
     if (audioRef.current) {
@@ -31,13 +28,6 @@ const MusicPlayer: React.FC = () => {
 
   return (
     <div>
-      {/* <iframe
-        ref={audioRef2}
-        src={urlMusic}
-        allow="autoplay"
-        id="audio"
-        style={{ display: "none" }}
-      ></iframe> */}
       <audio ref={audioRef} loop autoPlay>
         <source
           src="https://cdn.biihappy.com/ziiweb/wedding-musics/BeautifulInWhite-ShaneFilan-524801.mp3"

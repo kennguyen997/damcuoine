@@ -2,7 +2,6 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import styles from "./mainUI.module.scss";
-import imageSEO from './IMG_seo.jpg'
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -31,24 +30,21 @@ export default function RootLayout({
         <meta name="application-name" content="iWedding" />
         <meta property="og:site_name" content="Đình Văn & Lan Anh" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Đình Văn &amp; Lan Anh Wedding site!" />
-        <meta property="og:url" content="https://kennguyen997.github.io/damcuoine" />
+        <meta
+          property="og:title"
+          content="Đình Văn &amp; Lan Anh Wedding site!"
+        />
+        <meta
+          property="og:url"
+          content="https://kennguyen997.github.io/damcuoine"
+        />
         <meta
           property="og:description"
           content="Đình Văn & Lan Anh - Our wedding date: 2025-03-07 | Tôi yêu bạn vì tất cả những gì bạn đang có, tất cả những gì bạn đã có, và tất cả những gì bạn chưa hiện hữu"
         />
-        <meta
-          property="og:image"
-          content={imageSEO.src}
-        />
-        <meta
-          property="og:image:url"
-          content={imageSEO.src}
-        />
-        <meta
-          property="og:image:secure_url"
-          content={imageSEO.src}
-        />
+        <meta property="og:image" content="/image/IMG_avatar.jpg" />
+        <meta property="og:image:url" content="/image/IMG_avatar.jpg" />
+        <meta property="og:image:secure_url" content="/image/IMG_avatar.jpg" />
         <link
           rel="shortcut icon"
           type="image/x-icon"

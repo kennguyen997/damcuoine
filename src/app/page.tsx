@@ -8,6 +8,8 @@ import Infomation from "@/component/ifomation";
 import FallingHearts from "@/component/fallingHearts";
 import MusicPlayer from "@/component/musicPlayer";
 import ListGallery from "@/component/listImage";
+import VideoWedding from "@/component/videoWedding";
+import avatar from "@/images/IMG_avatar.jpg";
 import { Image } from "antd";
 
 export default function Home() {
@@ -41,15 +43,25 @@ export default function Home() {
         <Slider />
         <Calendar />
         <Infomation />
-        <ListGallery />
         <Event />
+        <VideoWedding />
+        <ListGallery />
         <footer className="site-footer footer-style-1">
           <div className="inner">
-            <div className="couple-pic">
-              <Image
-                src="https://cdn.biihappy.com/ziiweb/website/67c04b91403c2bf3fb01078a/47909f9dd0316ef22a9bdf957376bda5.jpeg"
-                alt="Đình Văn & Lan Anh Wedding site!"
-              />
+            <div
+              className="couple-pic"
+              // style={{
+              //   backgroundImage: `url(${avatar.src})`,
+              //   backgroundPosition: "right",
+              //   backgroundSize: "cover",
+              //   backgroundRepeat: "no-repeat",
+              // }}
+            >
+              <Image style={{width: '100%', height: '100%'}} src={avatar.src} alt="Đình Văn & Lan Anh Wedding site!" />
+              {/* <Image width={300} height={300} style={{
+                height: '100%',
+                 width: '100%'
+              }} src={avatar.src} alt="Nguyễn Đình Văn &amp; Vũ Thị Lan Anh"/> */}
             </div>
             <h2>Thank you!</h2>
           </div>
