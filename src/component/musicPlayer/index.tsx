@@ -14,7 +14,7 @@ const MusicPlayer: React.FC = () => {
       console.log({ isAudioPlaying });
       setIsPlaying(isAudioPlaying);
     }
-  }, [audioRef]);
+  }, [audioRef?.current?.readyState]);
 
   const toggleMusic = () => {
     if (audioRef.current) {
