@@ -22,9 +22,10 @@ export default function VideoWedding() {
         </p>
         <div className="video-btn">
           <a
-            href="/Club/video/6366143536486.mp4"
+            href="https://youtu.be/_4qLpSKeRPQ"
             className="video-play-btn"
             data-type="iframe"
+            target='_blank'
           >
             <i className="ti-control-play"></i>
           </a>
