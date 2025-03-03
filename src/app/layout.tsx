@@ -2,9 +2,6 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import styles from "./mainUI.module.scss";
-import StyledComponentsRegistry from "../lib/AntdRegistry";
-import Loading from "./loading";
-import { Html } from "next/document";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
