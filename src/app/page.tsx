@@ -78,7 +78,7 @@ export default function Home() {
               <Image
                 preview={false}
                 style={{ width: "100%", height: "100%" }}
-                src={'Club/image/IMG_avatar.jpg'}
+                src={avatar.src}
                 alt="Đình Văn & Lan Anh Wedding site!"
               />
             </div>
