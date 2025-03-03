@@ -2,6 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import styles from "./mainUI.module.scss";
+import imageSEO from './IMG_seo.jpg'
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -30,23 +31,23 @@ export default function RootLayout({
         <meta name="application-name" content="iWedding" />
         <meta property="og:site_name" content="Đình Văn & Lan Anh" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Đình Văn & Lan Anh Wedding site!" />
-        <meta property="og:url" content="https://damcuoine0703.iwedding.info" />
+        <meta property="og:title" content="Đình Văn &amp; Lan Anh Wedding site!" />
+        <meta property="og:url" content="https://kennguyen997.github.io/damcuoine" />
         <meta
           property="og:description"
           content="Đình Văn & Lan Anh - Our wedding date: 2025-03-07 | Tôi yêu bạn vì tất cả những gì bạn đang có, tất cả những gì bạn đã có, và tất cả những gì bạn chưa hiện hữu"
         />
         <meta
           property="og:image"
-          content="https://cdn.biihappy.com/ziiweb/website/67c04b91403c2bf3fb01078a/47909f9dd0316ef22a9bdf957376bda5.jpeg"
+          content={imageSEO.src}
         />
         <meta
           property="og:image:url"
-          content="https://cdn.biihappy.com/ziiweb/website/67c04b91403c2bf3fb01078a/47909f9dd0316ef22a9bdf957376bda5.jpeg"
+          content={imageSEO.src}
         />
         <meta
           property="og:image:secure_url"
-          content="https://cdn.biihappy.com/ziiweb/website/67c04b91403c2bf3fb01078a/47909f9dd0316ef22a9bdf957376bda5.jpeg"
+          content={imageSEO.src}
         />
         <link
           rel="shortcut icon"
