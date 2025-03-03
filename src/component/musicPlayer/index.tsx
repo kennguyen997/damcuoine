@@ -7,22 +7,23 @@ const MusicPlayer: React.FC = () => {
   const [isPlaying, setIsPlaying] = useState(true);
   const audioRef = useRef<HTMLAudioElement>(null);
   const audioRef2 = useRef<HTMLIFrameElement>(null);
-  const urlMusic = 'https://cdn.biihappy.com/ziiweb/wedding-musics/BeautifulInWhite-ShaneFilan-524801.mp3'
+  const urlMusic =
+    "https://cdn.biihappy.com/ziiweb/wedding-musics/BeautifulInWhite-ShaneFilan-524801.mp3";
   useEffect(() => {
-    if (audioRef.current) {
-      const isAudioPlaying =
-        !audioRef.current.paused && audioRef.current.readyState > 2;
-      console.log({ isAudioPlaying });
-      setIsPlaying(isAudioPlaying);
+    if (audioRef.current && isPlaying) {
+      audioRef.current.pause();
+      setTimeout(() => {
+        audioRef.current?.play();
+      }, 500);
     }
-  }, [audioRef?.current?.readyState]);
+  }, [audioRef?.current]);
 
   const toggleMusic = () => {
-    if (audioRef2.current) {
+    if (audioRef.current) {
       if (isPlaying) {
-        audioRef2.current.src = ""
+        audioRef.current.pause();
       } else {
-        audioRef2.current.src = urlMusic
+        audioRef.current?.play();
       }
       setIsPlaying(!isPlaying);
     }
@@ -30,13 +31,19 @@ const MusicPlayer: React.FC = () => {
 
   return (
     <div>
-      <iframe ref={audioRef2}  src={urlMusic} allow="autoplay" id="audio" style={{display: "none"}}></iframe>
-      {/* <audio ref={audioRef} loop autoPlay>
+      {/* <iframe
+        ref={audioRef2}
+        src={urlMusic}
+        allow="autoplay"
+        id="audio"
+        style={{ display: "none" }}
+      ></iframe> */}
+      <audio ref={audioRef} loop autoPlay>
         <source
           src="https://cdn.biihappy.com/ziiweb/wedding-musics/BeautifulInWhite-ShaneFilan-524801.mp3"
           type="audio/mpeg"
         />
-      </audio> */}
+      </audio>
       <FloatButton.Group shape="circle">
         <FloatButton
           className="playerIcon"
