@@ -42,9 +42,9 @@ export default function RootLayout({
           property="og:description"
           content="Đình Văn & Lan Anh - Our wedding date: 2025-03-07 | Tôi yêu bạn vì tất cả những gì bạn đang có, tất cả những gì bạn đã có, và tất cả những gì bạn chưa hiện hữu"
         />
-        <meta property="og:image" content="https://kennguyen997.github.io/damcuoine/image/IMG_avatar.jpg" />
-        <meta property="og:image:url" content="https://kennguyen997.github.io/damcuoine/image/IMG_avatar.jpg" />
-        <meta property="og:image:secure_url" content="https://kennguyen997.github.io/damcuoine/image/IMG_avatar.jpg" />
+        <meta property="og:image" content="Club/image/IMG_avatar.jpg" />
+        <meta property="og:image:url" content="Club/image/IMG_avatar.jpg" />
+        <meta property="og:image:secure_url" content="Club/image/IMG_avatar.jpg" />
         <link
           href="https://damcuoine0703.iwedding.info/templates/template15/css/libs.css?v=20241222"
           rel="stylesheet"
