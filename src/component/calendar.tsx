@@ -2,7 +2,7 @@ import { Statistic } from "antd";
 
 export default function Calendar() {
   const { Countdown } = Statistic;
-  const deadline = new Date("2025-03-07T18:00:00").getTime();
+  const deadline = new Date("2025-03-07T11:00:00+07:00").getTime();
   return (
     <section className="invitation-section section-padding section-bg-img">
       <div className="container">
