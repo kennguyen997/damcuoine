@@ -1,0 +1,32 @@
+{
+  "name": "inda_hood",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "dependencies": {
+    "@ant-design/cssinjs": "^1.17.0",
+    "@types/node": "20.5.9",
+    "@types/react": "18.2.21",
+    "@types/react-dom": "18.2.7",
+    "antd": "^5.24.2",
+    "eslint": "8.48.0",
+    "eslint-config-next": "13.4.19",
+    "lightgallery": "^2.8.2",
+    "next": "13.4.19",
+    "next-nprogress-bar": "^2.1.2",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "sass": "^1.66.1",
+    "typescript": "5.2.2"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.0.0"
+  }
+}

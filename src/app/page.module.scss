@@ -1,0 +1,128 @@
+@import "../style/defaultVariable.scss";
+.home_page {
+  margin-top: -$header-height;
+  height: 100svh;
+  overflow-y: scroll;
+  position: relative;
+  scroll-snap-type: y mandatory;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+.loading {
+  position: fixed;
+  height: 100svh;
+  overflow-y: scroll;
+  inset: 0;
+  width: 100vw;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: black;
+  // background-image:url(/Club/loading.gif);
+  // background-size:cover;
+  // background-position: center;
+  // background-repeat: no-repeat;
+  .logo {
+    z-index: 1001;
+    font-size: 34px;
+    font-family: cursive;
+    margin-bottom: 20px;
+  }
+  :global(img) {
+    height: 20vh;
+  }
+  &.hiden {
+    display: none;
+  }
+}
+.bgrCarosel {
+  scroll-snap-align: start;
+  transition: opacity 0.5s ease; /* Add a transition for opacity */
+  position: relative;
+  width: 100%;
+  height: 100svh;
+  overflow: hidden;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+  :global(video) {
+    min-height: 102svh;
+    min-width: 100vw;
+    position: absolute;
+    opacity: 0.8;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.Content {
+  position: fixed;
+  bottom: 54px;
+  left: 0;
+  padding-inline: 54px;
+  z-index: 2;
+  visibility: visible;
+  padding-bottom: 80px;
+  pointer-events: none; /* Tắt tương tác con trỏ */
+  .hone_text {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.1s;
+    transition: opacity 0.4s ease-in; /* Add a transition for opacity */
+    transition: all 0.4s;
+    &.fade-in-animation {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+  }
+  .home__subtitle {
+    margin-bottom: 32px;
+  }
+  .home__title {
+    margin-bottom: 12px;
+    letter-spacing: -1px;
+    margin-left: -2px;
+    font-size: 88px;
+    width: 75%;
+  }
+  .home__desc {
+    font-size: 22px;
+  }
+}
+
+.buttonDown {
+  position: fixed;
+  bottom: 54px;
+  left: 54px;
+  z-index: 3;
+  :global(.ant-progress-inner) {
+    width: 59px !important;
+    height: 59px !important;
+    font-size: 14px !important;
+  }
+}
+
+@media only screen and (max-width: 768.5px) {
+  .Content {
+    padding-inline: 14px;
+    .home__subtitle {
+      font-size: 14px;
+    }
+    .home__title {
+      width: 100%;
+      font-size: 40px;
+    }
+    .home__desc {
+      font-size: 20px;
+    }
+  }
+  .buttonDown {
+    left: 14px;
+  }
+}

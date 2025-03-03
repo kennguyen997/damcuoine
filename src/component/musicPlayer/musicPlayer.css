@@ -1,0 +1,22 @@
+.playerIcon .ant-float-btn-body {
+  background-color: #df4758;
+  position: relative;
+  &::after {
+    position: absolute;
+    display: block;
+    content: "";
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -o-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%;
+    background-color: rgba(242, 59, 67, 0.3);
+    width: 120%;
+    height: 120%;
+    left: -10%;
+    top: -10%;
+    -webkit-animation: biilogo-pulse 1s infinite;
+    animation: biilogo-pulse 1s infinite;
+    z-index: -1;
+  }
+}
