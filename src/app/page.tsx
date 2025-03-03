@@ -41,6 +41,7 @@ export default function Home() {
         <FallingHearts />
         <Header />
         <Slider />
+        <Infomation />
         <Calendar />
         <section className="section-accessibilities section-bg-img">
           <div className="container">
@@ -68,7 +69,6 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <Infomation />
         <Event />
         <VideoWedding />
         <ListGallery />
