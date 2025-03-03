@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { FloatButton } from "antd";
 import { QuestionCircleOutlined } from "@ant-design/icons";
 import "./musicPlayer.css";
+import Image from "next/image";
 
 const MusicPlayer: React.FC = () => {
   const [isPlaying, setIsPlaying] = useState(true);
@@ -70,8 +71,18 @@ const MusicPlayer: React.FC = () => {
         />
         <FloatButton
           className="playerIcon"
-          icon={<QuestionCircleOutlined />}
+          icon={
+            <Image
+              height={20}
+              width={25}
+              src={
+                "https://cdn.biihappy.com/ziiweb/images/static/common/rsvp4.png"
+              }
+              alt={""}
+            />
+          }
           type="default"
+          onClick={()=> window.open('https://forms.gle/QEwbUySDyAoRWoS4A', '_blank')}
           style={{ insetInlineEnd: 94 }}
         />
       </FloatButton.Group>
