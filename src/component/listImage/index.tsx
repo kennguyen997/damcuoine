@@ -32,17 +32,6 @@ export default function ListGallery() {
         </div>
       );
     });
-    return (
-      <div className="gallery-item" data-index={0}>
-        <a>
-          <img
-            src="https://cdn.biihappy.com/ziiweb/default/website/galleries/61990322c41d7b37de534633/small.jpg"
-            alt=""
-            className="img img-responsive"
-          />
-        </a>
-      </div>
-    );
   };
   return (
     <section className="gallery-section section-padding" id="gallery">

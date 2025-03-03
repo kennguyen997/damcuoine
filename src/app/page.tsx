@@ -8,6 +8,7 @@ import Infomation from "@/component/ifomation";
 import FallingHearts from "@/component/fallingHearts";
 import MusicPlayer from "@/component/musicPlayer";
 import ListGallery from "@/component/listImage";
+import { Image } from "antd";
 
 export default function Home() {
   const [isLoading, setIsloading] = useState(true);
@@ -45,7 +46,7 @@ export default function Home() {
         <footer className="site-footer footer-style-1">
           <div className="inner">
             <div className="couple-pic">
-              <img
+              <Image
                 src="https://cdn.biihappy.com/ziiweb/website/67c04b91403c2bf3fb01078a/47909f9dd0316ef22a9bdf957376bda5.jpeg"
                 alt="Đình Văn & Lan Anh Wedding site!"
               />
@@ -76,7 +77,7 @@ export default function Home() {
             >
               <span className="content-button tooltipBtn">
                 <span className="tooltiptext">Xác nhận tham dự</span>
-                <img
+                <Image
                   className="access-icon"
                   src="https://cdn.biihappy.com/ziiweb/images/static/common/rsvp4.png"
                   alt=""

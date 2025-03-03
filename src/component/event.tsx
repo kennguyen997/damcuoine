@@ -1,3 +1,4 @@
+import { Image } from "antd";
 import Background from "src/images/z6363754674676_3616d5428bfd72bd3907d67a6716f32b1.jpg";
 
 export default function Event() {
@@ -25,7 +26,8 @@ export default function Event() {
               <div className="grid section-bg-img">
                 <h3>TIỆC CƯỚI NHÀ NỮ</h3>
                 <div className="image-wrap">
-                  <img
+                  <Image
+                    preview={false}
                     src="https://cdn.biihappy.com/ziiweb/default/website/0ea5ba9f2cbe132b3fe488103eb61817.png"
                     alt=""
                   />
@@ -71,7 +73,8 @@ export default function Event() {
               <div className="grid section-bg-img">
                 <h3>TIỆC CƯỚI NHÀ NAM</h3>
                 <div className="image-wrap">
-                  <img
+                  <Image
+                    preview={false}
                     src="https://cdn.biihappy.com/ziiweb/default/website/21b07b7d583692f49091b87facbf2c92.png"
                     alt=""
                   />
